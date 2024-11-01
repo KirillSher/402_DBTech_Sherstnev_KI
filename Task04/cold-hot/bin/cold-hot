@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . '/../vendor/autoload.php';
+
+use KirillSher\ColdHot\Controller;
+use KirillSher\ColdHot\Database;
+use KirillSher\ColdHot\View;
+
+$db = new Database();
+$db->createGameTable();
+$db->createMovesTable();
+
+// Вывод меню
+View\showFeedback("Choose an action:");
+View\showFeedback("1. Start a new game");
+View\showFeedback("2. View game history");
+$choice = View\getUserInput("Enter your choice");
+
+switch ($choice) {
+    case '1':
+        Controller\startGame();
+        break;
+    case '2':
+        Controller\showGameHistory();
+        break;
+    default:
+        View\showFeedback("Invalid choice");
+        break;
+}
