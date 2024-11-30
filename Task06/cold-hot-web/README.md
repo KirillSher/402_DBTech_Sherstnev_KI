@@ -37,4 +37,4 @@
 3. **Откройте файл index.html в вашем браузере**
 
 4. **Запуск через GitHub Pages**:
-    Проект доступен онлайн через GitHub Pages: [Играть в cold-hot] (https://kirillsher.github.io/cold-hot-web/)
+    Проект доступен онлайн через GitHub Pages: [Играть в cold-hot](https://kirillsher.github.io/cold-hot-web/)
