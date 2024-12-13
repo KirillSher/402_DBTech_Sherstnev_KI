@@ -1,0 +1,97 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.menu {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.game-status {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px; /* фиксированная ширина для status */
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: auto;  /* ширина 100% для поля ввода */
+}
+
+#attempts-list,
+#game-list,
+#replay-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  text-align: left;
+}
+
+#attempts-list li,
+#game-list li,
+#replay-list li {
+  background: #e9ecef;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  padding: 10px;
+}
+
+#replay-container {
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px; /* фиксированная ширина для replay */
+}
+
+#close-replay {
+  background-color: #d9534f;
+}
+
+#game-list li {
+  cursor: pointer; /* Указывает, что элемент кликабельный */
+  transition: background-color 0.3s; /* Плавная анимация изменения цвета фона */
+}
+
+#game-list li:hover {
+  background-color: lightblue; /* Цвет подсветки при наведении */
+}
