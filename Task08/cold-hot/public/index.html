@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра "Холодно-Горячо"</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Игра "Холодно-Горячо"</h1>
+        <div class="form-group">
+            <label for="player-name">Ваше имя:</label>
+            <input type="text" id="player-name" placeholder="Введите ваше имя">
+            <button id="start-btn">Начать новую игру</button>
+        </div>
+        <div id="game-area" class="game-area" style="display:none;">
+            <p id="guessing-number-text" class="guessing-number-text">Угадайте число от 1 до 100!</p>
+            <input type="text" id="guess" placeholder="Ваше предположение">
+            <button id="guess-btn">Сделать предположение</button>
+            <div id="hints" class="hints"></div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="view-games">Посмотреть все игры</button>
+            <div id="empty-message" style="display:none;">Нет доступных игр.</div>
+            
+            <ul id="game-list" class="game-list"></ul>
+            <p id="history-moves-text" class="history-moves-text" style="display:none;">История ходов</p>
+            <ul id="attempts-list" class="attempts-list" style="display:none;"></ul>
+
+            <!-- Кнопка закрытия игр центрируется -->
+            <button id="close-games" style="display:none;">Закрыть</button>
+        </div>
+
+        <div class="cleaer-db-controls">
+            <button id="clear-db-btn">Очистить базу данных</button>
+        </div>
+
+        <div class="help-group">
+            <button id="help-btn">Справка</button>
+        </div>
+
+        <div id="help-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Справка по игре "Холодно-Горячо"</h2>
+                <p>В этой игре вам нужно угадать загаданное число от 1 до 100.</p>
+                <p>После каждой попытки вы получите подсказку:
+                    <ul>
+                        <li>Очень холодно</li>
+                        <li>Холодно</li>
+                        <li>Тепло</li>
+                        <li>Очень горячо</li>
+                        <li>Поздравляем! - если вы угадали число</li>
+                    </ul>
+                </p>
+                <p>
+                    <strong>Доступные функции:</strong><br>
+                    - <em>Начать новую игру:</em> Позволяет начать новую игру.<br>
+                    - <em>Посмотреть все игры:</em> Открывает список всех сохранённых игр. Чтобы посмотреть реплей конкретной игры, нажмите на интересующую вам игру из списка.<br>
+                    - <em>Повтор игры (Replay):</em> Показывает пошаговую историю выбранной игры.<br>
+                    - <em>Очистка базы данных:</em> Удаляет все сохранённые игры из базы данных.<br>
+                </p>
+                <p>
+                    <strong>Как играть:</strong><br>
+                    1. Введите ваше имя.<br>
+                    2. Нажмите кнопку "Начать новую игру", чтобы начать новую игру.<br>
+                    3. Введите ваше предположение о загаданном числе.<br>
+                    4. Цель игры - угадать загаданное число.<br>
+                </p>
+                <p>
+                    <strong>Реплей игры:</strong><br>
+                    Чтобы просмотреть повтор игры:<br>
+                    5. Нажмите кнопку <strong>"View Past Games"</strong>.<br>
+                    6. В появившемся списке выберите игру, кликнув на неё.<br>
+                    7. Реплей игры будет отображён в отдельном окне, где вы сможете увидеть все шаги и результат.<br>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    <script src="https://unpkg.com/idb@7.0.0/build/umd.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
